@@ -1,0 +1,24 @@
+{
+	"name": "ayaya-bot",
+	"version": "1.0.0",
+	"description": "Simple Discord bot made using discord.js",
+	"main": "index.js",
+	"scripts": {
+		"start": "eslint . --fix && node deploy-commands.js && node index.js",
+		"build": "eslint . --fix && node deploy-commands.js",
+		"dev": "node index.js",
+		"lint": "eslint . --fix",
+		"reg": "node deploy-commands.js"
+	},
+	"author": "haiueom",
+	"dependencies": {
+		"discord.js": "^14.7.1",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"node-fetch": "^3.3.1",
+		"undici": "^5.20.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.35.0"
+	}
+}
