@@ -17,7 +17,16 @@ class Interact {
 		this.verbs = {
 			bite: 'bitten',
 			hug: 'hugged',
-			punch: 'punched',
+			poke: 'poked',
+			cuddle: 'cuddled',
+			kiss: 'kissed',
+			lick: 'licked',
+			pat: 'patted',
+			greet: 'greeted',
+			smug: 'smuged',
+			bonk: 'bonked',
+			nom: 'nomed',
+			kick: 'kicked',
 		};
 
 		this.embed = new EmbedBuilder()
@@ -27,7 +36,7 @@ class Interact {
 			.setDescription(
 				`${this.target}, you're getting ${this.verbs[this.type]} by ${
 					this.from
-				}.`,
+				}.`
 			);
 	}
 
@@ -52,19 +61,19 @@ module.exports = {
 					option
 						.setName('user')
 						.setDescription('The user to bite')
-						.setRequired(true),
-				),
+						.setRequired(true)
+				)
 		)
 		.addSubcommand((subcommand) =>
 			subcommand
-				.setName('punch')
-				.setDescription('Punch someone')
+				.setName('poke')
+				.setDescription('Poke someone')
 				.addUserOption((option) =>
 					option
 						.setName('user')
-						.setDescription('The user to punch')
-						.setRequired(true),
-				),
+						.setDescription('The user to poke')
+						.setRequired(true)
+				)
 		)
 		.addSubcommand((subcommand) =>
 			subcommand
@@ -74,8 +83,107 @@ module.exports = {
 					option
 						.setName('user')
 						.setDescription('The user to hug')
-						.setRequired(true),
-				),
+						.setRequired(true)
+				)
+		)
+		.addSubcommand((subcommand) =>
+			subcommand
+				.setName('cuddle')
+				.setDescription('Cuddle someone')
+				.addUserOption((option) =>
+					option
+						.setName('user')
+						.setDescription('The user to cuddle')
+						.setRequired(true)
+				)
+		)
+		.addSubcommand((subcommand) =>
+			subcommand
+				.setName('kiss')
+				.setDescription('Kiss someone')
+				.addUserOption((option) =>
+					option
+						.setName('user')
+						.setDescription('The user to kiss')
+						.setRequired(true)
+				)
+		)
+		.addSubcommand((subcommand) =>
+			subcommand
+				.setName('lick')
+				.setDescription('Lick someone')
+				.addUserOption((option) =>
+					option
+						.setName('user')
+						.setDescription('The user to lick')
+						.setRequired(true)
+				)
+		)
+		.addSubcommand((subcommand) =>
+			subcommand
+				.setName('pat')
+				.setDescription('Pat someone')
+				.addUserOption((option) =>
+					option
+						.setName('user')
+						.setDescription('The user to pat')
+						.setRequired(true)
+				)
+		)
+		.addSubcommand((subcommand) =>
+			subcommand
+				.setName('greet')
+				.setDescription('Greet someone')
+				.addUserOption((option) =>
+					option
+						.setName('user')
+						.setDescription('The user to greet')
+						.setRequired(true)
+				)
+		)
+		.addSubcommand((subcommand) =>
+			subcommand
+				.setName('smug')
+				.setDescription('Smug someone')
+				.addUserOption((option) =>
+					option
+						.setName('user')
+						.setDescription('The user to smug')
+						.setRequired(true)
+				)
+		)
+		.addSubcommand((subcommand) =>
+			subcommand
+				.setName('bonk')
+				.setDescription('Bonk someone')
+				.addUserOption((option) =>
+					option
+						.setName('user')
+						.setDescription('The user to bonk')
+						.setRequired(true)
+				)
+		)
+		.addSubcommand((subcommand) =>
+			subcommand
+				.setName('nom')
+				.setDescription('Nom someone')
+				.addUserOption((option) =>
+					option
+						.setName('user')
+						.setDescription('The user to nom')
+						.setRequired(true)
+				)
+		)
+		.addSubcommand((subcommand) =>
+			subcommand
+				.setName('kick')
+				.setDescription('Kick someone')
+				.addUserOption((option) =>
+					option
+						.setName('user')
+						.setDescription('The user to kick')
+						.setRequired(true)
+				)
 		),
 
 	async execute(interaction) {
